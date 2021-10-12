@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/trans_white_25"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+            <ImageView
+                android:id="@+id/iv_doc"
+                app:srcCompat="@drawable/ic_calender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="@dimen/thirteen"
+            android:layout_width="@dimen/thirty"
+            android:layout_height="@dimen/thirty"
+            app:cardCornerRadius="@dimen/fifteen">
+
+            <ImageView
+                android:id="@+id/iv_dialog_close"
+                app:srcCompat="@drawable/delete_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+
+</LinearLayout>
+

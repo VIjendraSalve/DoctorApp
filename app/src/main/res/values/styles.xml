@@ -1,0 +1,140 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_drawable_left</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="android:actionMenuTextColor">@color/black</item>
+        <item name="android:itemBackground">@color/white</item>
+
+    </style><!-- <item name="android:textColorSecondary">@color/colorAccent</item>
+         <item name="android:actionMenuTextColor">@color/black</item>
+         <item name="android:itemBackground">@color/black</item>-->
+
+
+    <style name="WhiteDrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyAppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/OverFlow</item>
+    </style>
+
+    <style name="OverFlow" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_launcher</item>
+    </style>
+
+    <style name="R2Theme" parent="Theme.AppCompat.Light.NoActionBar">=
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondaryInverse">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_drawable_left</item>
+    </style>
+
+    <style name="R2Theme.Toolbar" parent="R2Theme">
+        <item name="actionMenuTextColor">@color/colorAccent</item>
+    </style>
+
+
+    <!--notification-->
+
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+        <!-- <item name="android:windowEnterAnimation">@anim/fab_scale_up</item>
+         <item name="android:windowExitAnimation">@anim/fab_scale_down</item>-->
+    </style>
+
+    <style name="style_small_font">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+
+    <style name="MyDarkToolbarStyle" parent="android:Widget.ListView.DropDown">
+        <item name="background">?android:selectableItemBackground</item>
+        <item name="android:popupBackground">@color/white</item>
+        <item name="android:dropDownSelector">@color/white</item>
+        <item name="android:divider">@color/yellow</item>
+        <item name="android:dividerHeight">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColorHint">@color/gray</item>
+
+    </style>
+
+    <!--    <style name="TitleBarButton">
+            <item name="android:layout_width">@dimen/title_bar_button_width</item>
+            <item name="android:layout_height">@dimen/title_bar_button_height</item>
+            <item name="android:layout_centerVertical">true</item>
+            <item name="android:paddingLeft">8dp</item>
+            <item name="android:paddingRight">8dp</item>
+            <item name="android:background">?android:attr/actionBarItemBackground</item>
+        </style>-->
+
+    <style name="MenuItems" parent="AppTheme">
+        <item name="android:textSize">12dp</item>
+        <item name="android:actionButtonStyle">@style/myActionButtonStyle</item>
+        <item name="actionButtonStyle">@style/myActionButtonStyle</item>
+    </style>
+
+    <style name="myActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">20dp</item>
+        <item name="android:maxWidth">38dp</item>
+        <item name="android:width">28dp</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="DialogTheme">
+
+        <item name="android:typeface">serif</item>
+
+    </style>
+
+    <style name="MaterialDialog" parent="@android:style/DeviceDefault.ButtonBar.AlertDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+        <item name="android:typeface">serif</item>
+
+    </style>
+
+</resources>

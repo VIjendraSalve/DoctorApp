@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryVeryLight">#91F395</color>
+    <color name="colorPrimary">#349538</color>
+    <color name="colorPrimaryFullDark">#09850E</color>
+    <color name="colorPrimaryDark">#11B317</color>
+        <color name="primary_light">#e31e25</color>
+    <color name="colorAccent">#000000</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFAFA</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="windowBackground">#F2F2F2</color><!--F2F2F2-->
+
+    <color name="shadow">#555555</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent_black">#80000000</color>
+    <color name="light_black">#55000000</color>
+
+    <!--shimmer-->
+    <color name="black_overlay">#66000000</color>
+    <color name="black_opaque">#78000000</color>
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="demo_dark_transparent">#24000000</color>
+    <color name="white_transparent">#BFFFFFFF</color>
+    <color name="black_transparent">#40000000</color>
+    <color name="grey_transparent">#c7c7c7</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#FFC107</color>
+
+
+    <color name="trans_white_25">#60dbebf4</color>
+    <color name="light_sky">#3ddada</color>
+    <color name="blue">#125CB6</color>
+    <color name="light_green">#55B750</color>
+    <color name="white_mix">#fdfbfb</color>
+    <color name="driver_green">#03AE65</color>
+    <color name="off_white">#f2f2f2</color>
+    <color name="trans_black_1">#60030000</color>
+</resources>

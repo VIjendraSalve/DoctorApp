@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".inside_user_pages.AddConsultationRequestActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10"
+                android:weightSum="5">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="4.2">
+
+                    <!-- <ImageView
+                         android:id="@+id/ivProfileImage"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:src="@mipmap/ic_launcher" />-->
+
+
+                    <TextView
+                        android:id="@+id/tvProfileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Profile Name"
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvProfileName"
+                        android:drawableLeft="@drawable/ic_mobile"
+                        android:drawablePadding="@dimen/ten"
+                        android:layout_marginTop="@dimen/ten"
+                        android:singleLine="true"
+                        android:text="Contact" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvContact"
+                        android:drawableLeft="@drawable/ic_baseline_email_24"
+                        android:drawablePadding="@dimen/ten"
+                        android:layout_marginTop="@dimen/two"
+                        android:text="Email" />
+
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvChangeMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_border"
+                    android:padding="@dimen/margin_10"
+                    android:text="Change Member"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white" />
+
+
+
+                <TextView
+                    android:id="@+id/tvMySelf"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/tvChangeMember"
+                    android:background="@drawable/button_border"
+                    android:padding="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="My Self"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey_transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:text="Appointment Date And Time"
+                    android:drawableLeft="@drawable/ic_calender"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="@dimen/ten"
+                    android:textColor="@color/black"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/tvReqDateAndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:maxLines="2"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_border"
+                    android:padding="@dimen/margin_10"
+                    android:text="Cancel"
+                    android:visibility="gone"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/tvReschedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/tvCancel"
+                    android:background="@drawable/button_border"
+                    android:padding="@dimen/margin_10"
+                    android:layout_alignParentRight="true"
+                    android:text="Pick Date"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey_transparent" />
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlZoneSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:id="@+id/tvCityTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="Booked For"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCityTitle"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/bg_otp_number_border"
+                        android:padding="10dp">
+
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/spinnerCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center_vertical" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:id="@+id/tvBookingIdTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="Appointment ID"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvBookingIdTitle"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/tvBookingId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:maxLines="2"
+                            android:text="000000"
+                            android:textColor="@color/black" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Disease"
+                android:layout_gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@+id/ivNameIcon"
+                android:textColorHint="#c5c5c5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editext_border"
+                    android:drawableTint="@color/gray"
+                    android:gravity="left"
+                    android:hint="Mention Disease*"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine|text"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:padding="15dp"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey_transparent" />
+
+            <RelativeLayout
+                android:id="@+id/rlSymptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/tvSymptoms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="Add Your Symptoms"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black" />
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSymptoms"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@drawable/bg_otp_number_border"
+                    android:padding="10dp">
+
+
+                    <com.sayantan.advancedspinner.MultiSpinner
+                        android:id="@+id/spinnerSymptoms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_vertical" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey_transparent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/sb_healthIssues"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/sb_healthIssues"
+                    android:text="You have previous health issues ?"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_healthIssues"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@+id/ivNameIcon"
+                android:textColorHint="#c5c5c5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHealthIssue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editext_border"
+                    android:drawableTint="@color/gray"
+                    android:gravity="left"
+                    android:hint="Mention Previous Health Issues"
+                    android:imeOptions="actionDone"
+                    android:inputType="textNoSuggestions|text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey_transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlPrescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tvPrescriptionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="Prescription (if any)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/eight">
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_prescription_doc"
+                            android:layout_gravity="center_horizontal"
+                            android:minHeight="@dimen/fifty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/iv_prescription_doc"
+                            android:layout_width="@dimen/eighty"
+                            android:layout_height="@dimen/eighty"
+                            android:src="@mipmap/ic_launcher" />
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/five"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="5dp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--<TextView
+                                android:visibility="gone"
+                                android:id="@+id/tv_edit_profile_aadhar_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/twenty"
+                                android:paddingRight="@dimen/twenty"
+                                android:paddingBottom="5dp"
+                                android:text="@string/image_name"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/twelve" />-->
+                            <TextView
+                                android:id="@+id/tv_select_prescription_image"
+                                android:layout_gravity="center"
+                                android:textAlignment="center"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:paddingTop="3dp"
+                                android:background="@drawable/button_border"
+                                android:text="@string/add_image"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/grey_transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="5dp"
+                        android:text="Reports(if any)"
+                        android:padding="@dimen/ten"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_report_doc"
+                        android:layout_gravity="center_horizontal"
+                        android:minHeight="@dimen/fifty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/iv_report_doc"
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="@dimen/eighty"
+                        android:src="@mipmap/ic_launcher" />
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/five"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="5dp"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--<TextView
+                            android:visibility="gone"
+                            android:id="@+id/tv_edit_profile_aadhar_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/twenty"
+                            android:paddingRight="@dimen/twenty"
+                            android:paddingBottom="5dp"
+                            android:text="@string/image_name"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/twelve" />-->
+                        <TextView
+                            android:id="@+id/tv_select_report_image"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="3dp"
+                            android:background="@drawable/button_border"
+                            android:text="@string/add_image"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@+id/ivNameIcon"
+                android:textColorHint="#c5c5c5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDrRecommandation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editext_border"
+                    android:drawableTint="@color/gray"
+                    android:gravity="left"
+                    android:hint="Recommended Doctor Name(if any)"
+                    android:imeOptions="actionDone"
+                    android:inputType="textNoSuggestions|text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:padding="15dp"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlPasswordId"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_border"
+                android:drawableRight="@drawable/ic_right_arrow"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="always">
+
+    <group
+        android:id="@+id/my_events_nav_drawer"
+        android:enabled="true">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_run"
+            android:title="Home" />
+
+<!--        <item
+            android:id="@+id/nav_enquiry"
+            android:icon="@drawable/ic_enquiry"
+            android:title="Enquiry / Feedback" />-->
+
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notify"
+            android:title="Notification" />
+
+    </group>
+
+
+
+
+    <group
+        android:checkableBehavior="single"
+        android:enabled="true"
+        android:visible="true">
+
+        <item
+            android:id="@+id/nav_website"
+            android:icon="@drawable/ic_user"
+            android:title="Website" />
+
+    </group>
+
+
+    <group
+        android:id="@+id/event_nav_drawer"
+        android:enabled="true">
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_mobile"
+            android:title="Contact Us" />
+
+    </group>
+
+
+
+
+    <!--    <item android:title="Information">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_aboutus"
+                    android:icon="@drawable/dra_about_us"
+                    android:title="About Us" />
+
+
+
+                <item
+                    android:id="@+id/nav_refund_policy"
+                    android:icon="@drawable/ic_refund_policy"
+                    android:title="Refund Policy" />
+
+
+                <item
+                    android:id="@+id/nav_terms_of_use"
+                    android:icon="@drawable/ic_terms"
+                    android:title="Terms of use" />
+
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/dra_share"
+                    android:title="Share" />
+
+
+            </menu>
+        </item>-->
+
+    <group android:id="@+id/dummy">
+
+        <!--        <item
+                    android:id="@+id/nav_my_address"
+                    android:title="My Business" />-->
+        <!-- <item
+             android:id="@+id/nav_info"
+             android:title="Refer a Friend" />-->
+        <!--<item
+            android:id="@+id/nav_settings"
+            android:title="Recipes" />-->
+        <!--<item
+            android:id="@+id/nav_blog"
+            android:title="Blog" />-->
+
+        <item
+            android:id="@+id/nav_terms_and_conditions"
+            android:title="Terms and Conditions" />
+
+        <!--  <item
+              android:id="@+id/nav_faq"
+              android:title="FAQ's" />-->
+
+        <item
+            android:id="@+id/nav_share"
+            android:title="Share our Love" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+    </group>
+
+</menu>
